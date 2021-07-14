@@ -40,13 +40,13 @@ const App = () => {
       <h1>Todo</h1>
       <h2> SSDC</h2>
       <form >
-        {/* <div > */}
+
         <TextField id="standard-basic" label="To-Do" type="text" value={val} onChange={event => setVal(event.target.value)} />
 
         <Button variant="contained" color="primary" type="submit" onClick={(event) => handleChange(event)}>Add</Button>
-        {/* </div> */}
+
       </form>
-      {/* <List dense className={classes.root}> */}
+
       <List dense className="list" >
         {
           list.map((item, index) => {
