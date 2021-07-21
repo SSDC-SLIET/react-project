@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import firebase from 'firebase'
 
 import { TextField, List, Button, ListItem, ListItemText, ListItemSecondaryAction, Checkbox } from '@material-ui/core'
 import './App.css'
-
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
 import db from './firebase'
+import Todo from './Todo';
 const App = () => {
 
   const [list, setList] = useState([])
@@ -14,9 +15,9 @@ const App = () => {
   const [val, setVal] = useState("")
 
 
-  // useEffect(() => {
-
-  // }, [])
+  useEffect(() => {
+    getData();
+  }, [])
 
 
   const handleChange = (event) => {
@@ -80,31 +81,21 @@ const App = () => {
 
       </form>
 
-      <Button variant="contained" color="primary" onClick={getData}>get</Button>
+
 
       <List dense className="list" >
         {
-          list.map((item, index) => {
 
-            return (
-              <ListItem key={index} button>
-                {/* <ListItemAvatar>
-                <Avatar
-                  alt={`Avatar n°${value + 1}`}
-                  src={`/static/images/avatar/${value + 1}.jpg`}
-                />
-              </ListItemAvatar> */}
-                <ListItemText id={index} primary={item.text} />
-                <ListItemSecondaryAction>
-                  <Checkbox
 
-                  />
-                </ListItemSecondaryAction>
-              </ListItem>
-            )
+          // JSON.stringify(list)
+          list.map((item) => {
+
+            return <Todo item={item} />
+            // <Todo />
+
           })
-
         }
+
       </List>
 
 

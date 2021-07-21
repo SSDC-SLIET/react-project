@@ -1,0 +1,39 @@
+[debug] [2021-07-21T14:51:50.593Z] ----------------------------------------------------------------------
+[debug] [2021-07-21T14:51:50.597Z] Command:       /home/linuxbrew/.linuxbrew/Cellar/node/16.2.0/bin/node /home/linuxbrew/.linuxbrew/bin/firebase deploy
+[debug] [2021-07-21T14:51:50.598Z] CLI Version:   9.16.0
+[debug] [2021-07-21T14:51:50.598Z] Platform:      linux
+[debug] [2021-07-21T14:51:50.598Z] Node Version:  v16.2.0
+[debug] [2021-07-21T14:51:50.600Z] Time:          Wed Jul 21 2021 20:21:50 GMT+0530 (India Standard Time)
+[debug] [2021-07-21T14:51:50.601Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-21T14:51:50.710Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-21T14:51:50.711Z] > authorizing via signed-in user (singh99amitoj@gmail.com)
+[debug] [2021-07-21T14:51:50.711Z] [iam] checking project ssdc-todo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-21T14:51:50.715Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ssdc-todo:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-07-21T14:51:52.364Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 21 Jul 2021 14:51:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1360","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T14:51:52.369Z] > refreshing access token with scopes: []
+[debug] [2021-07-21T14:51:52.369Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T14:51:52.649Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 21 Jul 2021 14:51:54 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T14:51:52.774Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ssdc-todo [none]
+[debug] [2021-07-21T14:51:53.251Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ssdc-todo 200
+[debug] [2021-07-21T14:51:53.252Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ssdc-todo {"projectId":"ssdc-todo","projectNumber":"833013040172","displayName":"ssdc-todo","name":"projects/ssdc-todo","resources":{"hostingSite":"ssdc-todo","storageBucket":"ssdc-todo.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'ssdc-todo'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-07-21T14:51:53.261Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-21T14:51:53.262Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T14:51:53.515Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 21 Jul 2021 14:51:55 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T14:51:53.525Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ssdc-todo/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-07-21T14:51:55.626Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 21 Jul 2021 14:51:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[ssdc-todo]: beginning deploy... 
+[info] i  hosting[ssdc-todo]: found 18 files in build 
+[debug] [2021-07-21T14:51:56.566Z] > refreshing access token with scopes: []
+[debug] [2021-07-21T14:51:56.566Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T14:51:56.569Z] [hosting] hash cache [YnVpbGQ] stored for 18 files
+[debug] [2021-07-21T14:51:56.569Z] [hosting][hash queue][FINAL] {"max":912,"min":15,"avg":70.77777777777777,"active":0,"complete":18,"success":18,"errored":0,"retried":0,"total":18,"elapsed":921}
