@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 const firebaseApp = firebase.initializeApp({
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.authDomain,
-    projectId: process.env.projectId,
-    storageBucket: process.env.storageBucket,
-    messagingSenderId: process.env.messagingSenderId,
-    appId: process.env.appId
+    apiKey: "AIzaSyD75tUbjX_V4NJ1B74XtmGt6pPQZ6uqcFI",
+    authDomain: "ssdc-todo.firebaseapp.com",
+    projectId: "ssdc-todo",
+    storageBucket: "ssdc-todo.appspot.com",
+    messagingSenderId: "833013040172",
+    appId: "1:833013040172:web:45a3204cb0d115d6f93d89"
 });
 
 const db = firebaseApp.firestore();

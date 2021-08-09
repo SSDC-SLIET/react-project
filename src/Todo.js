@@ -14,7 +14,8 @@ function Todo({ item }) {
             </ListItemAvatar> */}
 
             {/* {JSON.strigify(item)} */}
-            <ListItemText id={item.index} primary={item.text} />
+            <ListItemText id={item.index} primary={item.text} secondary={item.username} />
+
             <ListItemSecondaryAction>
                 <DeleteForeverIcon onClick={
                     event =>
